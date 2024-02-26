@@ -5,11 +5,13 @@ import { INotificacao } from "@/interfaces/INotificacao";
 
 import { EstadoProjeto, projeto } from "./modulos/projeto";
 import { EstadoTarefa, tarefa } from "./modulos/tarefas";
+import { EstadoUsuario, usuario } from "./modulos/usuario";
 
 export interface Estado {
     notificacoes: INotificacao[],
     projeto: EstadoProjeto,
-    tarefa: EstadoTarefa
+    tarefa: EstadoTarefa,
+    usuario: EstadoUsuario
 }
 
 export const key: InjectionKey<Store<Estado>> = Symbol()
@@ -22,6 +24,9 @@ export const store = createStore<Estado>({
         },
         tarefa: {
             tarefas: []
+        },
+        usuario: {
+            usuarios: []
         }
     },
     mutations: {
@@ -37,7 +42,8 @@ export const store = createStore<Estado>({
     },
     modules: {
         projeto,
-        tarefa
+        tarefa,
+        usuario
     }
 })
 

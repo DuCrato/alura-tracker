@@ -10,14 +10,20 @@
       <ul>
         <li>
           <router-link to="/" class="link">
-            <i class="fas fa-tasks"></i>
-            tarefas
+            <i class="fas fa-tasks icon"></i>
+            Tarefas
           </router-link>
         </li>
         <li>
           <router-link to="/projetos" class="link">
-            <i class="fas fa-project-diagram"></i>
-            projetos
+            <i class="fas fa-project-diagram icon"></i>
+            Projetos
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/usuarios" class="link">
+            <i class="fa fa-user icon"></i>
+            Usuários
           </router-link>
         </li>
       </ul>
@@ -74,9 +80,13 @@ header {
   color: #fff;
 }
 .link:hover {
-  color: #FAF0CA;
+  color: #ffffff70;
 }
 .link.router-link-active {
-  color: #FAF0CA;
+  color: #ffffff70;
+}
+
+.icon {
+  margin-right: 3px;
 }
 </style>
